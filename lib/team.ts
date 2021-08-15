@@ -1,7 +1,7 @@
 import { getTeam } from '../lib/nba';
 
-export const teamLogoUrl = (teamId: number) => {
+export const getTeamLogo = (teamId: number) => {
+  console.log(teamId);
   const team = getTeam(teamId);
-  if (team == null) return null;
-  return `http://stats.nba.com/media/img/teams/logos/${team.abbreviation}_logo.svg`;
+  return `http://stats.nba.com/media/img/teams/logos/${team?.abbreviation}_logo.svg`;
 };

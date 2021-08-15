@@ -8,8 +8,8 @@ export const getPlayerInfo = async (playerId: number) => {
   return await NBA.stats.playerInfo({ PlayerID: playerId });
 };
 
-export const getBoxScore = async (gameId: string) => {
-  return await NBA.stats.boxScore({ GameID: gameId });
+export const getBoxScore = async (day: string, gameId: string) => {
+  return await NBA.data.boxScore(day, gameId);
 };
 
 export const getTeam = (teamId: number) => {
